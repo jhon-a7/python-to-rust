@@ -192,11 +192,11 @@ def display_results(ev, i_map):
     print()
     print('player 1 strategies:')
     sorted_items = sorted(i_map.items(), key=lambda x: x[0])
-    for _, v in filter(lambda x: gu.get_active_player(x[0]) == 0, sorted_items):
+    for _, v in filter(lambda x: get_active_player(x[0]) == 0, sorted_items):
         print(v)
     print()
     print('player 2 strategies:')
-    for _, v in filter(lambda x: gu.get_active_player(x[0]) == 1, sorted_items):
+    for _, v in filter(lambda x: get_active_player(x[0]) == 1, sorted_items):
         print(v)
 
 def train(n_iterations = 10000):
